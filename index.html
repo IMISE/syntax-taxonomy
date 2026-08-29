@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="The SynTax Taxonomy structures use cases for synthetic data generation based on their objectives and data requirements."
+    >
+    <title>The SynTax Taxonomy</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="site-header">
+        <a class="site-title" href="./" aria-label="The SynTax Taxonomy home">
+          The SynTax Taxonomy
+        </a>
+        <p class="site-description">
+          Use cases for synthetic data generation based on data requirements.
+        </p>
+      </header>
+
+      <main class="main-content">
+        <article>
+          <h1>
+            The SynTax Taxonomy: Use Cases for Synthetic Data Generation based on
+            Data Requirements
+          </h1>
+
+          <section aria-labelledby="abstract-heading">
+            <h2 id="abstract-heading">Abstract</h2>
+            <p>
+              Access to real-world clinical data is usually restricted due to privacy
+              regulations, ethical considerations, and legal constraints. Synthetic
+              data has emerged as a promising approach to address this challenge.
+              However, existing comparisons of synthetic data generation methods often
+              focus on methodological aspects or utility metrics without explicitly
+              considering the intended application context. This work introduces a
+              use-case-oriented taxonomy <em>‘SynTax’</em> to structure synthetic data
+              generation scenarios based on their primary objectives and corresponding
+              data requirements. The taxonomy was developed using an expert-based
+              approach informed by existing literature and organizes use cases
+              hierarchically, reflecting increasing requirements. Identified use cases
+              include conformance validation, performance evaluation, system
+              validation, data demonstration, education, data enrichment, and
+              analysis. The proposed taxonomy provides a structured framework for
+              comparing synthetic data generation tools based on their intended use
+              case and associated data requirements. It supports users in selecting
+              appropriate tools for specific application scenarios and offers guidance
+              for developers to identify gaps in current tool capabilities. Future work
+              should extend this approach through systematic benchmarking and
+              evaluation of how well tools meet the requirements of different use
+              cases.
+            </p>
+          </section>
+
+          <hr>
+
+          <section aria-labelledby="methodology-heading">
+            <h2 id="methodology-heading">Methodology</h2>
+            <p>
+              A wide range of synthetic data generation tools has been developed in
+              recent years, each targeting different application scenarios. To address
+              a comparison of tools across use cases, an exemplary set of synthetic
+              data generation tools was selected. The selection was based on an
+              expert-driven process combined with a targeted search in the literature
+              and software repositories (e.g.,
+              <a href="https://nfdi.software/">nfdi.software</a> and
+              <a href="https://www.toolpool-gesundheitsforschung.de/">ToolPool Gesundheitsforschung</a>).
+              The inclusion criterion was open-source availability. Based on this
+              criterion, eleven tools were selected. These software repositories focus
+              on software utilized in the context of medical research, which was the
+              primary field of expertise of the experts consulted. The selected
+              synthetic data generation tools were mapped to the SynTax use cases
+              through a review of their primary literature. A tool was assigned to a
+              use case if the corresponding application scenario was explicitly
+              described in the respective primary literature as an intended use,
+              development objective, or evaluation context.
+            </p>
+          </section>
+
+          <hr>
+
+          <section aria-labelledby="tools-comparison-heading">
+            <h2 id="tools-comparison-heading"><em>Tools Comparison</em></h2>
+
+            <p>
+              The reviewed tools included
+              <a href="https://doi.org/10.1093/jamiaopen/ooaa060">MDClone</a>,
+              <a href="https://proceedings.mlr.press/v68/choi17a.html">medGAN</a>,
+              <a href="https://doi.org/10.1038/s41746-022-00666-x">MultiNODEs</a>,
+              <a href="https://doi.org/10.48550/arXiv.2412.04687">PerfGen</a>,
+              <a href="https://doi.org/10.1109/DSAA.2016.49">Synthetic Data Vault (SDV)</a>,
+              <a href="https://www.swat4ls.org/workshops/amsterdam2026/programme/accepted-submissions/">SemSynth</a>,
+              <a href="https://doi.org/10.1093/jamia/ocx079">Synthea</a>,
+              <a href="https://arxiv.org/abs/2301.07573">SynthCity</a>,
+              <a href="https://doi.org/10.1186/s13023-024-03254-2">SynthMD</a>,
+              <a href="https://github.com/hl7-eu/SYNDERAI">SYNDERAI</a>, and
+              <a href="https://doi.org/10.3389/fdata.2020.00016">Variational Autoencoder Modular Bayesian Networks (VAMBN)</a>.
+              MDClone was used as a proprietary comparator because it is frequently
+              referenced in the literature on synthetic health data.
+            </p>
+
+            <p>
+              The table maps the selected tools to the identified use cases based on
+              explicit statements in the primary literature. The mapping shows that
+              the reviewed tools predominantly target one or two use cases rather than
+              maximizing use case coverage. It should be noted that the mapping
+              reflects the selected subset of tools and their positioning in the
+              literature. In particular, the focus is on tools in the medical research
+              domain.
+            </p>
+
+            <div class="table-block">
+              <p class="table-caption" id="table-caption">
+                <strong>Table.</strong> Mapping of synthetic data generation tools to
+                use cases based on stated intended use in primary literature
+              </p>
+              <div class="table-scroll" tabindex="0" role="region" aria-labelledby="table-caption">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">Use Case</th>
+                      <th scope="col">
+                        Tools explicitly described for this use case in primary
+                        literature
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1. Standard and Constraint Validation</td>
+                      <td><a href="https://github.com/hl7-eu/SYNDERAI">SYNDERAI</a></td>
+                    </tr>
+                    <tr>
+                      <td>2. Performance Evaluation</td>
+                      <td><a href="https://doi.org/10.48550/arXiv.2412.04687">PerfGen</a></td>
+                    </tr>
+                    <tr>
+                      <td>3. System Validation</td>
+                      <td><a href="https://doi.org/10.1186/s13023-024-03254-2">SynthMD</a></td>
+                    </tr>
+                    <tr>
+                      <td>4. Data Demonstration</td>
+                      <td>
+                        <a href="https://www.swat4ls.org/workshops/amsterdam2026/programme/accepted-submissions/">SemSynth</a>,
+                        <a href="https://github.com/hl7-eu/SYNDERAI">SYNDERAI</a>,
+                        <a href="https://doi.org/10.1093/jamia/ocx079">Synthea</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5. Education</td>
+                      <td><a href="https://doi.org/10.1093/jamia/ocx079">Synthea</a></td>
+                    </tr>
+                    <tr>
+                      <td>6. Data Enrichment</td>
+                      <td><a href="https://arxiv.org/abs/2301.07573">SynthCity</a></td>
+                    </tr>
+                    <tr>
+                      <td>7. Analysis</td>
+                      <td>
+                        <a href="https://doi.org/10.1093/jamiaopen/ooaa060">MDClone</a>,
+                        <a href="https://proceedings.mlr.press/v68/choi17a.html">medGAN</a>,
+                        <a href="https://doi.org/10.1038/s41746-022-00666-x">MultiNODEs</a>,
+                        <a href="https://doi.org/10.1109/DSAA.2016.49">SDV</a>,
+                        <a href="https://arxiv.org/abs/2301.07573">SynthCity</a>,
+                        <a href="https://doi.org/10.3389/fdata.2020.00016">VAMBN</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <p>
+              The most frequently represented category is <em>7. Analysis</em> with
+              six tools positioned for this purpose. This can be attributed to the
+              predominant role of synthetic data in healthcare for analytical
+              applications. Overall, the mapping indicates that tool suitability is
+              highly use-case-dependent and that no single tool explicitly covers all
+              identified application scenarios.
+            </p>
+          </section>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p><small>Prepared as a static GitHub Pages site.</small></p>
+      </footer>
+    </div>
+  </body>
+</html>
